@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class RockPaperScissors {
+public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); //Bring scanner info into the program
 
         while (true) {
             String[] rps = {"r", "p", "s"};
@@ -17,15 +17,15 @@ public class RockPaperScissors {
                     break;
                 }
                 System.out.println(playerA + " is not a valid move.");
+            }
+            while(true) {
+                System.out.println("Please enter your move (r, p, or s)");
                 playerB = scanner.nextLine();
                 if (playerB.equals("r") || playerB.equals("p") || playerB.equals("s")) {
                     break;
                 }
                 System.out.println(playerB + " is not a valid move.");
             }
-
-            System.out.println("Please enter your move (r, p, or S)");
-
             if (playerA.equals(playerB)) {
                 System.out.println("The game was a tie!");
             }
@@ -64,5 +64,6 @@ public class RockPaperScissors {
             }
         }
         scanner.close();
+        }
     }
 }
